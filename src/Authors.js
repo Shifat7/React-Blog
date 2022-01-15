@@ -22,6 +22,7 @@ function Authors() {
 
     const [AuthorTempState, setAuthorTempState] = useState([]);
 
+    // pagination calculation
     const [PageNumber, setPageNumber] = useState(0);
     const [Postsperpage] = useState(4);
     const PagesVisited = PageNumber * Postsperpage;
@@ -29,6 +30,7 @@ function Authors() {
     const changePage = ({ selected }) => {
         setPageNumber(selected);
     }
+
 
     const getAuthors = async () => {
 
@@ -42,6 +44,8 @@ function Authors() {
         }
 
         data.results.sort((a, b) => (a._id > b._id) ? 1 : -1)
+
+
 
         setAuthor(data.results);
 
@@ -58,6 +62,7 @@ function Authors() {
         const newAuthors = JSON.parse(localStorage.getItem('authors'));
         if (newAuthors && newAuthors.length > 0) {
             setAuthor(newAuthors);
+            setAuthorTempState(newAuthors);
         } else {
             getAuthors();
         }
@@ -78,7 +83,6 @@ function Authors() {
 
     const favBttn = (Auth) => {
 
-
         const filterData = AuthorTempState.filter(data => data._id !== Auth._id)
 
         Auth.idfav = true;
@@ -89,8 +93,6 @@ function Authors() {
 
 
         setAuthor(updateAuthor)
-
-
     }
 
 
