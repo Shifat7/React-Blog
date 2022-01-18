@@ -11,6 +11,7 @@ import Users from './Users';
 import Error from './Error';
 import User from './User';
 import NAV from './Nav';
+import FavAuthor from './FavAuthor';
 
 function App() {
 
@@ -44,7 +45,7 @@ function App() {
               <Route path="/!#" element={<Home/>}/>
               <Route path="/:id" element={<Home/>}/>
               <Route path="/Authors" element={<Authors/>}/>
-              <Route path="/FavAuthors" element={<Authors/>}/>
+              <Route path="/FavAuthors" element={<FavAuthor/>}/>
               <Route path="/Users/" element={<Users/>}/>
               <Route path="/Users/User/:Id" element={<User/>}/>
               <Route path="/Users/User/!#" element={<User/>}/>

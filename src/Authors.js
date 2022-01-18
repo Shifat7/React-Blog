@@ -7,16 +7,6 @@ import useLocalStorage from './useLocalStorage';
 
 function Authors() {
 
-    // const getLocal = () => {
-
-    //     const Data = localStorage.getItem('author');
-    //     if (Data) {
-    //         return JSON.parse(Data);
-    //     } else {
-    //         return [];
-    //     }
-    // }
-
     const [author, setAuthor] = useState([]);
 
 
@@ -45,12 +35,9 @@ function Authors() {
 
         data.results.sort((a, b) => (a._id > b._id) ? 1 : -1)
 
-
-
         setAuthor(data.results);
 
         setAuthorTempState(data.results);
-
 
     }
 
@@ -69,8 +56,7 @@ function Authors() {
     }
 
     useEffect(() => {
-        // console.log((author));
-
+        
         if (author.length === 0) {
             getAuth();
         }

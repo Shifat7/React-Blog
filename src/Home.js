@@ -7,6 +7,7 @@ import ReactPaginate from 'react-paginate';
 function Home() {
     const [posts, setPosts] = useState([]);
 
+    //pagination calculation
     const [PageNumber, setPageNumber] = useState(0);
     const [Postsperpage] = useState(10);
     const PagesVisited = PageNumber * Postsperpage;
