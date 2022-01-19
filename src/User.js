@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {useParams, Link} from 'react-router-dom';
 
-
-
 function User() {
 
     let {Id} = useParams();
@@ -20,7 +18,6 @@ function User() {
   
       SetPosts(data);
   
-
     }
 
       useEffect(() => {
@@ -65,7 +62,6 @@ function User() {
                                 </div>
                               ))}
                             </div>
-
                 </div>
             </div>
         </div>

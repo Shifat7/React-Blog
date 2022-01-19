@@ -1,5 +1,4 @@
 import './App.css';
-
 import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -12,6 +11,7 @@ import Error from './Error';
 import User from './User';
 import NAV from './Nav';
 import FavAuthor from './FavAuthor';
+import Profile from './Profile';
 
 function App() {
 
@@ -50,6 +50,7 @@ function App() {
               <Route path="/Users/User/:Id" element={<User/>}/>
               <Route path="/Users/User/!#" element={<User/>}/>
               <Route path="/Comments/:id" element={<Comments/>}/>
+              <Route path="/Profile" element={<Profile/>}/>
               <Route path="*" element={<Error/>}/>
             </Routes>
               {showButton && (

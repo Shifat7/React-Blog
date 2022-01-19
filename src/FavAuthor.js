@@ -7,7 +7,6 @@ const FavAuthor = () => {
 
 
     const [author, setAuthor] = useState([]);
-
     const [AuthorTempState, setAuthorTempState] = useState([]);
 
 
@@ -57,8 +56,7 @@ const FavAuthor = () => {
                                     <p>Bio: {Author.bio}</p>
                                     <p>Wiki: <a href='{Author.link}'>{Author.link}</a></p>
                                 </div>) :
-                                (<></>))
-                        }
+                                (<></>))}
                     </div>
                 </div>
             </div>

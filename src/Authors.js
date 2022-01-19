@@ -3,7 +3,7 @@ import AuthorSidebar from './AuthorSidebar';
 import './App.css';
 import { useState, useEffect } from 'react';
 import ReactPaginate from 'react-paginate';
-import useLocalStorage from './useLocalStorage';
+
 
 function Authors() {
 
@@ -77,7 +77,6 @@ function Authors() {
 
         updateAuthor.sort((a, b) => (a._id > b._id) ? 1 : -1)
 
-
         setAuthor(updateAuthor)
     }
 
@@ -137,6 +136,8 @@ function Authors() {
             </div>
         </div>
     );
+
+    //h1
 }
 
 export default Authors;
